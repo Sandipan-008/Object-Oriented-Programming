@@ -70,3 +70,66 @@ circle = Circle(radius=3)
 print(f"Circle area: {circle.area()}")
 
 #-----------------------------------------------------------------------------------------------------------------------------------
+'''Define a class Animal with a method make_sound().
+Create two subclasses Dog and Cat, each overriding the make_sound() method to provide their respective sounds.
+Instantiate objects of both subclasses and call their make_sound() methods.'''
+
+class Animal:
+    def make_sound(self):
+        pass  # Placeholder method
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+# Instantiate objects
+dog_instance = Dog()
+cat_instance = Cat()
+
+# Call make_sound() methods
+print(dog_instance.make_sound())  
+print(cat_instance.make_sound())  
+
+#------------------------------------------------------------------------------------------------------------------------------------
+'''Create a base class Book with attributes title and author, and a derived class EBook that adds an attribute file_size.
+Write methods in both classes to display their respective details.
+Use the super() function to call the base class method from the derived class'''
+
+class book:
+    def __init__(self,title,author):
+        self.title=title
+        self.author=author
+    def publication(self):
+        print("{} written by {} published on 2020".format(self.title,self.author))
+        
+class ebook(book):
+    def __init__(self,title,author,file_size):
+        super().__init__(title,author)
+        self.file_size=file_size
+    def online(self):
+        print(f"{self.title} is available as ebook in {self.file_size} size on kindle")
+    
+
+Book = ebook("cant hurt me","David Goggins","5 mb")  # It is always be derived class
+print(Book.title)
+print(Book.author)
+print(Book.file_size)
+Book.online()
+Book.publication()
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+'''Write a program to demonstrate method overriding. 
+Create a class Parent with a method show_message().
+Derive a class Child that overrides the show_message() method.
+Instantiate a Child object and call the show_message() method to see which version is executed.'''
+
+
+
+'''Implement multiple inheritance in a scenario where a class A has a method method_A(), class B has a method method_B(),
+and class C inherits from both A and B. Create an object of class C and call both method_A() and method_B().'''
+
+

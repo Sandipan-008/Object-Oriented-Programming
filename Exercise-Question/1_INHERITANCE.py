@@ -18,3 +18,27 @@ emp = Employee(name="John Doe", age=30, employee_id="E12345")
 emp.display_info()
 
 #------------------------------------------------------------------------------------------------------------------------
+'''Write a Python program to demonstrate single inheritance where a class Vehicle is inherited by a class Car.
+Vehicle should have a method start_engine() and Car should have a method play_music().
+Show how you can create a Car object and call both methods.  '''
+
+class Vehicle:
+    def __init__(self,name):
+        self.name=name
+    def start_engine(self):
+        print("Engine started!")
+
+class Car(Vehicle):
+    def play_music(self):
+        print("Playing music in the car!")
+    def owner(self):
+        print(f"{self.name} is the owner of car")
+
+# Create a Car object
+my_car = Car("tim")
+
+# Call methods
+my_car.start_engine()
+my_car.play_music()
+my_car.owner()
+print(my_car.name)

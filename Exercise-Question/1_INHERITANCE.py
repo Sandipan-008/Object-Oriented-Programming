@@ -48,7 +48,7 @@ Derive two classes Rectangle and Circle from Shape.
 Implement the area() method in both derived classes to calculate the area of a rectangle and a circle, respectively.'''
 
 class Shape:
-    def area(self):
+    def area(self):  # derived class can override this method from base class
         pass
         
 class Rectangle(Shape):

@@ -144,6 +144,22 @@ child_obj.show_message()
 '''Implement multiple inheritance in a scenario where a class A has a method method_A(), class B has a method method_B(),
 and class C inherits from both A and B. Create an object of class C and call both method_A() and method_B().'''
 
+class A:
+    def method_A(self):
+        print("Inside method_A() of class A")
+class B:
+    def method_B(self):
+        print("Inside method_B() of class B")
 
+class C(A, B):
+    pass  # Inherits from both A and B
+
+# Create an object of class C
+c_obj = C()
+# Call methods from both parent classes
+c_obj.method_A()
+c_obj.method_B()
+
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
 

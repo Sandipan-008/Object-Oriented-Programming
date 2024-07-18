@@ -64,10 +64,8 @@ class Circle(Shape):
     def area(self):
         return 3.14 * (self.radius ** 2)
 
-
 rect = Rectangle(length=4, width=5)
 print(f"Rectangle area: {rect.area()}")
-
 circle = Circle(radius=3)
 print(f"Circle area: {circle.area()}")
 

@@ -36,9 +36,49 @@ class Car(Vehicle):
 
 # Create a Car object
 my_car = Car("tim")
-
 # Call methods
 my_car.start_engine()
 my_car.play_music()
 my_car.owner()
 print(my_car.name)
+
+#----------------------------------------------------------------------------------------------------------------------------------
+'''Implement a class hierarchy where a Shape class is the base class with a method area().
+Derive two classes Rectangle and Circle from Shape.
+Implement the area() method in both derived classes to calculate the area of a rectangle and a circle, respectively.'''
+
+
+class Shape:
+    def __init__(self, color):
+        self.color = color
+
+    def area(self):
+        # Placeholder method; each derived class will override this
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, color, length, width):
+        super().__init__(color)
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, color, radius):
+        super().__init__(color)
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * (self.radius ** 2)
+
+
+    # Create a rectangle
+rect = Rectangle(color="Blue", length=4, width=5)
+print(f"Rectangle area: {rect.area()}")
+
+    # Create a circle
+circle = Circle(color="Red", radius=3)
+print(f"Circle area: {circle.area()}")
+

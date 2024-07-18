@@ -121,15 +121,29 @@ Book.online()
 Book.publication()
 
 #--------------------------------------------------------------------------------------------------------------------------------------
-
 '''Write a program to demonstrate method overriding. 
 Create a class Parent with a method show_message().
 Derive a class Child that overrides the show_message() method.
 Instantiate a Child object and call the show_message() method to see which version is executed.'''
 
+class Parent:
+    def show_message(self):
+        print("Inside Parent")
 
+class Child(Parent):
+    def show_message(self):
+        print("Inside Child")
 
+# Instantiate a Child object
+child_obj = Child()
+
+# Call the overridden method
+child_obj.show_message()
+
+#----------------------------------------------------------------------------------------------------------------------------------------
 '''Implement multiple inheritance in a scenario where a class A has a method method_A(), class B has a method method_B(),
 and class C inherits from both A and B. Create an object of class C and call both method_A() and method_B().'''
+
+
 
 

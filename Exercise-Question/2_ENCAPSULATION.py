@@ -40,5 +40,53 @@ print("Updated Name:", person.get_name())  # Output: Bob
 print("Updated Age:", person.get_age())  # Output: 25
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
+'''Write a Python program that defines a class BankAccount with private attributes account_number and balance.
+Provide methods deposit(), withdraw(), and get_balance() to interact with these attributes.
+Show how encapsulation protects the balance attribute from being accessed directly.'''
 
+class BankAccount:
+    def __init__(self, account_number: str, initial_balance: float = 0.0):
+        self.__account_number = account_number  # private attribute
+        self.__balance = initial_balance  # private attribute
+    
+    # Method to deposit money
+    def deposit(self, amount: float) -> None:
+        if amount > 0:
+            self.__balance += amount
+        else:
+            raise ValueError("Deposit amount must be positive")
+    
+    # Method to withdraw money
+    def withdraw(self, amount: float) -> None:
+        if amount > 0:
+            if amount <= self.__balance:
+                self.__balance -= amount
+             
+            else:
+                raise ValueError("Insufficient funds")
+        else:
+            raise ValueError("Withdrawal amount must be positive")
+    
+    # Method to get the current balance
+    def get_balance(self) -> float:
+        return self.__balance
+       
+    def accountinfo(self) -> float:
+        print(f"your account number is: {self.__account_number}\nand has {self.__balance} rupees")
 
+# Demonstration of encapsulation
+sbi = BankAccount("12345678", 100.0)
+sbi.accountinfo()
+
+# Accessing and modifying balance via public methods
+print("Initial Balance:", sbi.get_balance())  
+d = int(input("enter amount to deposit: "))
+sbi.deposit(d)
+print("Balance after deposit:", sbi.get_balance()) 
+w = int(input("enter amount to withdraw: "))
+sbi.withdraw(w)
+print("Balance after withdrawal:", sbi.get_balance())  
+new_bal = sbi.get_balance()
+print("new balance is: ",new_bal)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------

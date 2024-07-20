@@ -144,3 +144,61 @@ print("Average Grade:", student.calculate_average())  # Output: 84.33
 student.remove_grade(90.0)
 # Calculating average grade after removal
 print("Average Grade after removal:", student.calculate_average())  # Output: 81.5
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+'''Design a class Car with private attributes make, model, and year. 
+Provide public methods to set and get the values of these attributes, and a method display_info() to print out the car’s details.
+Show how encapsulation is used to control access to the car's details.'''
+
+class Car:
+    def __init__(self, make: str, model: str, year: int):
+        self.__make = make  # private attribute
+        self.__model = model  # private attribute
+        self.__year = year  # private attribute
+    
+    # Getter for make
+    def get_make(self) -> str:
+        return self.__make
+    # Getter for model
+    def get_model(self) -> str:
+        return self.__model 
+    # Getter for year
+    def get_year(self) -> int:
+        return self.__year
+     
+        
+    # Setter for model
+    def set_model(self, model: str) -> None:
+        self.__model = model
+    # Setter for make
+    def set_make(self, make: str) -> None:
+        self.__make = make
+    # Setter for year
+    def set_year(self, year: int) -> None:
+        self.__year = year
+        
+    
+    # Method to display car details
+    def display_info(self) -> None:
+        print(f"Car Details:\nMake: {self.__make}\nModel: {self.__model}\nYear: {self.__year}")
+
+# Demonstration of encapsulation
+car = Car("Toyota", "Corolla", 2020)
+
+# Accessing and modifying car details via public methods
+print("Initial Car Details:")
+car.display_info()
+
+# Update car details
+car.set_make("Honda")
+car.set_model("Civic")
+car.set_year(2022)
+
+print("\nUpdated Car Details:")
+car.display_info()
+
+# Access individual attributes
+print("\nAccessing Individual Attributes:")
+print("Make:", car.get_make())  # Output: Honda
+print("Model:", car.get_model())  # Output: Civic
+print("Year:", car.get_year())  # Output: 2022

@@ -116,9 +116,9 @@ class ebook(book):
 Book = ebook("cant hurt me","David Goggins","5 mb")  # It is always be derived class
 print(Book.title)
 print(Book.author)
+Book.publication()
 print(Book.file_size)
 Book.online()
-Book.publication()
 
 #--------------------------------------------------------------------------------------------------------------------------------------
 '''Write a program to demonstrate method overriding. 

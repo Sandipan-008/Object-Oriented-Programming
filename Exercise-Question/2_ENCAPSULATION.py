@@ -245,3 +245,76 @@ SNU_library.remove_book("DBMS")
 SNU_library.list_of_books()
 print("SNU_library section: ",SNU_library.get_section())
 SNU_library.search_book("Networking")
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
+'''Write a Python program that defines a class Rectangle with private attributes length and width.
+Provide methods to set and get these attributes, and methods to calculate the area and perimeter of the rectangle.
+Show how encapsulation ensures that the rectangle’s dimensions can only be modified through the provided methods.'''
+
+class Rectangle:
+    def __init__(self,length,width):
+        self.__length = length
+        self.__width = width
+        
+    def cal_area(self):
+        self.area = (self.__length*self.__width)
+        return self.area
+    
+    def set_length(self,length):
+        self.__length = length
+    
+    def set_width(self,width):
+        self.__width = width
+        
+    def get_perimeter(self):
+        self.perimeter = 2 * (self.__length + self.__width)
+        return self.perimeter
+        
+rectangle = Rectangle(20,15)
+rectangle2 = Rectangle(0,0)
+print("area of a rectangle is: ",rectangle.cal_area())
+rectangle2.set_length(17)
+rectangle2.set_width(8)
+print("perimeter of a rectangle2 is: ",rectangle2.get_perimeter())
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+'''Implement a class Employee with private attributes employee_id, name, and salary.
+Provide methods to set and get these attributes, and a method apply_raise() to increase the salary by a given percentage.
+Demonstrate how encapsulation is used to protect the salary attribute.'''
+
+class Employee:
+    def __init__(self,eid,name,salary):
+        self.__eid = eid
+        self.__name = name
+        self.__salary = salary
+        
+    def set_id(self,eid):
+        self.__eid = eid
+    def set_name(self,name):
+        self.__name = name
+    def set_salary(self,salary):
+        self.__salary = salary
+     
+    def  get_all_info(self):
+        print(f"\nemployee id : {self.__eid}\nemployee name: {self.__name}\nemployee salary: {self.__salary}\n")
+        
+      # Method to apply raise to salary
+    def apply_raise(self, percentage):
+        if percentage >= 0:
+           self.__salary += self.__salary * (percentage / 100)
+        else:
+           raise ValueError("Raise percentage must be non-negative")    
+                
+
+employee1 = Employee("","","")
+employee1.set_id("e001")
+employee1.set_name("Sandipan")
+employee1.set_salary(15000)
+
+print("---Employee Details:---")
+employee1.get_all_info()
+employee1.apply_raise(10)  # 10% raise
+print("\n---Employee Details after 10% raise:---")
+employee1.get_all_info()
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -210,8 +210,8 @@ Demonstrate how encapsulation is used to manage the books list.'''
 
 class Library:
     def __init__(self,section):
-        self.__section = section
-        self.__books = []
+        self.__section = section        
+        self.__books = []            # class_ attributes
     
     #only way to access private attributes 
     def get_section(self):
@@ -227,7 +227,7 @@ class Library:
             raise ValueError("book not removed")
             
     def search_book(self,book):
-        self.__book = book
+        self.__book = book        # method_attribute
         if book in self.__books:
            print(f"the book {self.__book} is founded")
         else:

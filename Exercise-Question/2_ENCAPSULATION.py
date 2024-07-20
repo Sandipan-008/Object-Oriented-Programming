@@ -202,3 +202,46 @@ print("\nAccessing Individual Attributes:")
 print("Make:", car.get_make())  # Output: Honda
 print("Model:", car.get_model())  # Output: Civic
 print("Year:", car.get_year())  # Output: 2022
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------
+'''Create a class Library with private attributes books (a list of book titles).
+Provide methods to add a book, remove a book, search a book, and list all books.
+Demonstrate how encapsulation is used to manage the books list.'''
+
+class Library:
+    def __init__(self,section):
+        self.__section = section
+        self.__books = []
+    
+    #only way to access private attributes 
+    def get_section(self):
+        return self.__section
+        
+    def add_book(self,book):
+        self.__books.append(book)
+
+    def remove_book(self,book):
+        if book in self.__books:
+           self.__books.remove(book)
+        else:
+            raise ValueError("book not removed")
+            
+    def search_book(self,book):
+        self.__book = book
+        if book in self.__books:
+           print(f"the book {self.__book} is founded")
+        else:
+            raise ValueError("book not found")
+
+    def list_of_books(self):
+        print(f"SNU_library has\n{self.__section} section\nand there has books of {self.__books}")
+
+SNU_library = Library("Computer Science")
+SNU_library.add_book("Op.system")
+SNU_library.add_book("Networking")
+SNU_library.add_book("DBMS")
+SNU_library.remove_book("DBMS")
+
+SNU_library.list_of_books()
+print("SNU_library section: ",SNU_library.get_section())
+SNU_library.search_book("Networking")

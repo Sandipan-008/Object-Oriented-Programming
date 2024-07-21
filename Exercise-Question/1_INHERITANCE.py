@@ -161,5 +161,18 @@ c_obj.method_A()
 c_obj.method_B()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
+'''Create an abstract class Appliance with an abstract method operate(). 
+Derive two classes WashingMachine and Refrigerator from Appliance and implement the operate() method in each.
+Instantiate objects of both derived classes and call their operate() methods.'''
 
+#---------------------------------------------------------------------------------------------------------------------------------------------
+'''Write a Python program where a class Base has a private attribute __secret and a method reveal_secret().
+Create a derived class Derived and try to access the private attribute __secret from an object of the derived class. Explain the result.'''
 
+#----------------------------------------------------------------------------------------------------------------------------------------------
+'''Design a class hierarchy where Vehicle is the base class with attributes make and model. 
+Create a derived class Car that adds an attribute number_of_doors.
+Further derive a class ElectricCar from Car that adds an attribute battery_capacity. 
+Write methods in each class to display their details and demonstrate the usage.'''
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------

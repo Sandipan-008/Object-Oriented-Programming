@@ -318,3 +318,56 @@ print("\n---Employee Details after 10% raise:---")
 employee1.get_all_info()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+'''Design a class PasswordManager with a private attribute password.
+Provide methods to set the password, check if a given password is correct, and change the password.
+Show how encapsulation is used to manage access to the password.'''
+
+class password_manager:
+    
+    def __init__(self,name,password):
+        self.name = name
+        self.__password = password
+        
+    def set_password(self,password):
+        self.__password = password
+    def get_password(self):
+        return self.__password
+        
+    def check_password(self,check_p):
+        self.check_p = check_p
+        if (self.__password == self.check_p):
+            print("password check successful")
+        else:{
+            print("entered a wrong password")
+        }
+    def reset_password(self,new_p):
+        self.__new_password = new_p
+        self.__password = self.__new_password
+        return self.__password
+    def password_desc(self):
+        print(f"your password name: {self.name}\nyour password is: {self.__password}")
+        
+Password = password_manager("facebook"," ")
+print("----Enter password to Login----")
+lg = input("Enter Password: ")
+Password.set_password(lg)
+Password.password_desc()
+cp = input("enter your facebook password: ")
+Password.check_password(cp)
+
+np = input("enter new password: ")
+Password.reset_password(np)
+Password.password_desc()
+print("Your new password : ",Password.get_password())
+
+#-------------------------------------------------------------------------------------------------------------------------------
+'''Create a class Order with private attributes order_id, customer_name, and items (a list of item names).
+Provide methods to set and get the order ID and customer name, add an item, remove an item, and list all items.
+Demonstrate how encapsulation is used to manage the items list.'''
+
+
+
+
+'''Write a Python program that defines a class Temperature with a private attribute celsius. 
+Provide methods to set and get the temperature in Celsius, and methods to convert the temperature to Fahrenheit and Kelvin.
+Show how encapsulation is used to control access to the temperature value and its conversions.'''

@@ -139,30 +139,18 @@ Derive two classes WashingMachine and Refrigerator from Appliance and implement 
 Instantiate objects of both derived classes and call their operate() methods.'''
 
 from abc import ABC, abstractmethod
-
 # Define the abstract class Appliance
 class Appliance(ABC):
     @abstractmethod
     def operate(self):
         pass
 
-'''abstract method helps the base class to manipulate their child class  
-abstract method is like a restriction imposed on child class   
-abstraction method ensures that child class must implement the method of base class
-which is a abstract method'''
-
-'''child class may use the base class method or don't use the 
-base class metohd with no abstraction'''
-
-'''but the child class must implement the abstract method of base class
-otherwisw it will throw the error'''
-
 # Define the WashingMachine class that inherits from Appliance
 class WashingMachine(Appliance):
     def operate(self):
         print("The washing machine is operating.")
-    def off(self):
-        print("The washing machine is off.")
+    def off(self):                                                             
+print("The washing machine is off.")
 
 # Define the Refrigerator class that inherits from Appliance
 class Refrigerator(Appliance):
@@ -177,6 +165,17 @@ refrigerator = Refrigerator()
 washing_machine.operate()
 refrigerator.operate()
 washing_machine.off()
+
+'''abstract method helps the base class to manipulate their child class  
+abstract method is like a restriction imposed on child class   
+abstraction method ensures that child class must implement the method of base class
+which is a abstract method'''
+
+'''child class may use the base class method or don't use the 
+base class metohd with no abstraction'''
+
+'''but the child class must implement the abstract method of base class
+otherwisw it will throw the error'''
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 '''Write a Python program where a class Base has a private attribute __secret and a method reveal_secret().

@@ -22,3 +22,6 @@ public class std{
         s1.info(s1.name,s1.age);
     }
 } 
+
+
+'''compile time polymorphism = function overloading'''

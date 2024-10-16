@@ -45,7 +45,7 @@ public class std{
 }  
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>...
-// constructor 3 [copy code]
+// constructor 3 [copy constructor]
 class student{
     String name;
     int age;

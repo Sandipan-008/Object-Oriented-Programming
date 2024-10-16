@@ -18,35 +18,6 @@ Create a base class Shape with a method draw(). Derive classes Circle, Square, a
 
 Design a class hierarchy where Notification is a base class with a method send(). Derive classes EmailNotification, SMSNotification, and PushNotification from Notification and override the send() method in each. Write a function that takes a Notification object and calls its send() method to demonstrate polymorphism.
 
-These questions will help solidify the understanding of polymorphism by providing hands-on practice with creating classes and methods that demonstrate the concept in different contexts.
 
 
 
-
-
-
-You said:
-provide me 10  programming questions based on encapsulation for clarity.
-ChatGPT said:
-ChatGPT
-Here are 10 programming questions based on encapsulation, designed to help understand and clarify the concept:
-
-Create a class Person with private attributes name and age. Provide public methods to set and get the values of these attributes. Demonstrate how encapsulation is achieved by using these methods to access and modify the private attributes.
-
-Write a Python program that defines a class BankAccount with private attributes account_number and balance. Provide methods deposit(), withdraw(), and get_balance() to interact with these attributes. Show how encapsulation protects the balance attribute from being accessed directly.
-
-Implement a class Student with private attributes student_id and grades. Provide methods to set and get the student_id, and methods to add a grade, remove a grade, and calculate the average grade. Demonstrate how encapsulation is used to manage the grades list.
-
-Design a class Car with private attributes make, model, and year. Provide public methods to set and get the values of these attributes, and a method display_info() to print out the car’s details. Show how encapsulation is used to control access to the car's details.
-
-Create a class Library with private attributes books (a list of book titles). Provide methods to add a book, remove a book, and list all books. Demonstrate how encapsulation is used to manage the books list.
-
-Write a Python program that defines a class Rectangle with private attributes length and width. Provide methods to set and get these attributes, and methods to calculate the area and perimeter of the rectangle. Show how encapsulation ensures that the rectangle’s dimensions can only be modified through the provided methods.
-
-Implement a class Employee with private attributes employee_id, name, and salary. Provide methods to set and get these attributes, and a method apply_raise() to increase the salary by a given percentage. Demonstrate how encapsulation is used to protect the salary attribute.
-
-Design a class PasswordManager with a private attribute password. Provide methods to set the password, check if a given password is correct, and change the password. Show how encapsulation is used to manage access to the password.
-
-Create a class Order with private attributes order_id, customer_name, and items (a list of item names). Provide methods to set and get the order ID and customer name, add an item, remove an item, and list all items. Demonstrate how encapsulation is used to manage the items list.
-
-Write a Python program that defines a class Temperature with a private attribute celsius. Provide methods to set and get the temperature in Celsius, and methods to convert the temperature to Fahrenheit and Kelvin. Show how encapsulation is used to control access to the temperature value and its conversions.
